@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #3f3f46;
+}
+header {
+    background-color: #cd30e2;
+    padding: 1rem;
+    color: white;
+}
+.wrapper {
+    max-width: 1280px;
+    margin: auto;
+}
+.container {
+    margin: 1rem;
+}
+.action-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.search-section {
+    width: 100%;
+}
+.add-section {
+    width: 100%;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px 1px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+}
+.card-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group-row {
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+}
+.form-group label {
+    margin-bottom: 0.25rem;
+}
+.input {
+    border: 1.5px solid #3f3f46;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+}
+input:focus, input:focus-visible {
+    border-color: #cd30e2;
+}
+.checkbox {
+    width: 1.5em;
+    height: 1.5em;
+    accent-color: #cd30e2;
+}
+.checkbox:focus-visible {
+    outline-color: #cd30e2;
+}
+.button {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    outline: none;
+    border: transparent;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+.button-primary {
+    color: #ffffff;
+    background-color: #cd30e2;
+}
+.button-primary:hover, .button-primary:focus-visible  {
+    background: #b221c5;
+}
+.button-secondary {
+    background-color: transparent;
+    border: 1.5px solid #cd30e2;
+    color: #cd30e2;
+}
+.button-secondary:hover, .button-secondary:focus-visible  {
+    background: #cd30e2;
+    color: #ffffff;
+}
+.button-tertiary {
+    background-color: transparent;
+    color: #cd30e2;
+}
+.button-tertiary:hover, .button-tertiary:focus-visible  {
+    text-decoration: underline;
+}
+.button-add {
+    width: 100%;
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 1.5rem;
+}
+.list-card {
+    background-color: #d8d8e1;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.list-header {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.list-button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 100%;
+    row-gap: 1rem;
+}
+.w-full {
+    width: 100%;
+}
+.mt-8 {
+    margin-top: 2rem;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+.font-sm {
+    font-size: 0.875rem;
+}
+.modal-overlay {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    overflow: auto;
+}
+.modal-close {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: -1.5rem;
+    margin-left: 1.5rem;
+}
+.hidden {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .list {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .button-add {
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    .container {
+        margin: 1rem 2rem;
+        flex-direction: row;
+    }
+    .action-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .search-section {
+        width: 75%;
+    }
+    .add-section {
+        width: 25%;
+        display: flex;
+        justify-content: end;
+    }
+    .list {
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .modal {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .list {
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+}
